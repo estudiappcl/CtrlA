@@ -12,11 +12,16 @@ import { DataUsuarioRutComponent } from './modules/data-usuario-rut/data-usuario
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+
 import { PasswordModule } from 'primeng/password';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuModule } from 'primeng/menu';
 import { DividerModule } from 'primeng/divider';
+import { CalendarModule } from 'primeng/calendar';
 import { ConsultaIndividualComponent } from './modules/consulta-individual/consulta-individual.component';
+import { ConsultaMasivaComponent } from './modules/consulta-masiva/consulta-masiva.component';
+import { IngresoIndividualComponent } from './modules/ingreso-individual/ingreso-individual.component';
+import { EditarUsuarioComponent } from './modules/editar-usuario/editar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,9 @@ import { ConsultaIndividualComponent } from './modules/consulta-individual/consu
     ForgotPasswordComponent,
     DataUsuarioRutComponent,
     ConsultaIndividualComponent,
+    ConsultaMasivaComponent,
+    IngresoIndividualComponent,
+    EditarUsuarioComponent,
     
   ],
   imports: [
@@ -38,7 +46,8 @@ import { ConsultaIndividualComponent } from './modules/consulta-individual/consu
     PasswordModule,
     MenubarModule,
     MenuModule,
-    DividerModule
+    DividerModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

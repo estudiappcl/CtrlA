@@ -9,7 +9,7 @@ export class HomeComponent {
   breadcrumbs = [
 
     { text: 'Home', link: '/home' },
-    { text: 'Consulta-individual', link: '/consulta-individual' },
+   
   
   ];
 }

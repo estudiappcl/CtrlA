@@ -5,6 +5,8 @@ import { ForgotPasswordComponent } from './modules/forgot-password/forgot-passwo
 import { HomeComponent } from './modules/home/home.component';
 import { DataUsuarioRutComponent } from './modules/data-usuario-rut/data-usuario-rut.component';
 import { ConsultaIndividualComponent } from './modules/consulta-individual/consulta-individual.component';
+import { ConsultaMasivaComponent } from './modules/consulta-masiva/consulta-masiva.component';
+import { IngresoIndividualComponent } from './modules/ingreso-individual/ingreso-individual.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -12,7 +14,9 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'home', component: HomeComponent },
   { path: 'consulta-individual', component: ConsultaIndividualComponent },
-  { path: 'data-usuario-rut', component: DataUsuarioRutComponent }
+  { path: 'consulta-masiva', component: ConsultaMasivaComponent },
+  { path: 'data-usuario-rut', component: DataUsuarioRutComponent },
+  { path: 'ingreso-individual', component: IngresoIndividualComponent }
 ];
 
 @NgModule({
