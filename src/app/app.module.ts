@@ -22,6 +22,7 @@ import { ConsultaIndividualComponent } from './modules/consulta-individual/consu
 import { ConsultaMasivaComponent } from './modules/consulta-masiva/consulta-masiva.component';
 import { IngresoIndividualComponent } from './modules/ingreso-individual/ingreso-individual.component';
 import { EditarUsuarioComponent } from './modules/editar-usuario/editar-usuario.component';
+import { ModalPasswordComponent } from './modules/Custom/modal-password/modal-password.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { EditarUsuarioComponent } from './modules/editar-usuario/editar-usuario.
     ConsultaMasivaComponent,
     IngresoIndividualComponent,
     EditarUsuarioComponent,
+    ModalPasswordComponent,
     
   ],
   imports: [
