@@ -53,3 +53,18 @@
     font-size: 24px;
     border: 1px solid #D96A64;
 }
+
+
+.header-ingreso {
+    background-color: #F4B14F;
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
+    border: 1px solid #F4B14F;
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: space-around; /* Ajusta según necesites */
+  }
