@@ -12,7 +12,7 @@ import { DataUsuarioRutComponent } from './modules/data-usuario-rut/data-usuario
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-
+import { FormsModule } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuModule } from 'primeng/menu';
@@ -51,7 +51,8 @@ import { RecoverPasswordComponent } from './modules/recover-password/recover-pas
     MenubarModule,
     MenuModule,
     DividerModule,
-    CalendarModule
+    CalendarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
