@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-recover-password',
   templateUrl: './recover-password.component.html',
-  styleUrl: './recover-password.component.css'
+  styleUrls: ['./recover-password.component.css']
 })
 export class RecoverPasswordComponent {
+  password: string = '';
+  showPassword: boolean = false;
 
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
 }
