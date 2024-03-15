@@ -8,7 +8,8 @@ import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 export class ModalPasswordComponent implements OnInit {
   @Input() display: boolean = false;
   @Output() displayChange = new EventEmitter<boolean>();
-  constructor() { }
+
+  
 
   ngOnInit(): void {
   }
@@ -16,5 +17,6 @@ export class ModalPasswordComponent implements OnInit {
   onClose() {
     this.display = false;
     this.displayChange.emit(this.display);
+    
   }
 }
