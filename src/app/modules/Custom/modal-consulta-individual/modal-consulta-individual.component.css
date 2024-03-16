@@ -63,10 +63,10 @@
   }
   
   .btn-primary {
-    background-color: #388CD9; /* El color de fondo */
+    background-color: #34AA4E; /* El color de fondo */
     color: white; /* El color del texto */
     font-weight: 500;
-    border-color: #388CD9; /* El color del borde */
+    border-color: #34AA4E; /* El color del borde */
   }
   
   
@@ -94,6 +94,11 @@
     border: none;
     background: transparent;
     cursor: pointer;
+  }
+
+  .imagen{
+    height: 20px;
+     margin-bottom: 0.15rem;
   }
   
   @media (max-width: 768px) {
