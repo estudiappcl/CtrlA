@@ -9,12 +9,14 @@
   justify-content: center; /* Centra horizontalmente el contenido del modal */
   align-items: center; /* Centra verticalmente el contenido del modal */
   background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  backdrop-filter: blur(10px);
 }
 
 .custom-modal-content {
   background-color: #fefefe;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 0.9375rem 7.525rem;
+  border: 1px solid #34AA4E;
+  transform: translateY(-25%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* Ajusta el ancho y la altura del contenido del modal según necesites */
   width: auto; /* O un ancho fijo si es necesario */

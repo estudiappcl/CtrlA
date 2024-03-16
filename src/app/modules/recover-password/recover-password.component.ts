@@ -19,7 +19,7 @@ export class RecoverPasswordComponent {
 
   abrirModalExitoso(): void {
     this.tituloModal = 'Contraseña actualizada';
-    this.mensajeModal = 'Su contraseña se ha actualizado con éxito, presione volver para dirigirse al login.';
+    this.mensajeModal = 'Su contraseña se ha actualizado con éxito,<br/>presione volver para dirigirse al login.';
     this.mostrarModal = true;
   }
 
