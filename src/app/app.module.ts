@@ -2,13 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/login/login.component';
 import { HomeComponent } from './modules/home/home.component';
 import { ForgotPasswordComponent } from './modules/forgot-password/forgot-password.component';
 import { DataUsuarioRutComponent } from './modules/data-usuario-rut/data-usuario-rut.component';
-
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
@@ -25,6 +23,8 @@ import { EditarUsuarioComponent } from './modules/editar-usuario/editar-usuario.
 import { ModalPasswordComponent } from './modules/Custom/modal-password/modal-password.component';
 import { RecoverPasswordComponent } from './modules/recover-password/recover-password.component';
 import { ModalExitosoComponent } from './modules/Custom/modal-exitoso/modal-exitoso.component';
+import { TableModule } from 'primeng/table';
+import { TablasComponent } from './modules/Custom/tablas/tablas.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +40,8 @@ import { ModalExitosoComponent } from './modules/Custom/modal-exitoso/modal-exit
     ModalPasswordComponent,
     RecoverPasswordComponent,
     ModalExitosoComponent,
+    TablasComponent,
+    
     
   ],
   imports: [
@@ -54,7 +56,8 @@ import { ModalExitosoComponent } from './modules/Custom/modal-exitoso/modal-exit
     MenuModule,
     DividerModule,
     CalendarModule,
-    FormsModule
+    FormsModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent],

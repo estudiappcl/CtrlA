@@ -130,9 +130,10 @@
               <!-- Botón de búsqueda, alineado a la derecha y abajo -->
               <button
                 pButton
-                routerLink="/home"
+
                 type="button"
                 class="search-button px-5 py-1 mb-3"
+                (click)="onSearch()"
               >
                 Buscar
               </button>
@@ -141,7 +142,8 @@
         </div>
       </div>
       <div class="container-fluid ps-5 my-2">
-        <hr />
+        <hr *ngIf="!showTable" />
+        <app-tablas *ngIf="showTable"></app-tablas>
       </div>
 
       <div class="row mt-3">
