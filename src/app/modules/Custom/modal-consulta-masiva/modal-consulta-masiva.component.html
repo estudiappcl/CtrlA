@@ -1,5 +1,7 @@
 <div class="custom-modal">
+
   <div class="custom-modal-content rounded-3 text-center">
+    <!-- <button class="close  " (click)="cerrarModal()">&times;</button> -->
     <h4 class="my-2">Consulta Masiva</h4>
     <div class="form-group mt-5"> <!-- Agrupa los selects -->
       <select class="form-select py-3 color-select mt-2 mb-4"> <!-- Reduce el margen -->
@@ -18,7 +20,7 @@
     </div>
     <div class="button-group d-flex justify-content-between mt-5 mb-3"> <!-- Ajusta margen superior -->
       <button class="btn btn-outline mt-5" (click)="cerrarModal()">Volver</button>
-      <button class="btn btn-primary mt-5">Continuar</button>
+      <button class="btn btn-primary mt-5" (click)="irAConsultaMasiva()">Continuar</button>
     </div>
   </div>
 </div>
