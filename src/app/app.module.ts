@@ -24,6 +24,7 @@ import { IngresoIndividualComponent } from './modules/ingreso-individual/ingreso
 import { EditarUsuarioComponent } from './modules/editar-usuario/editar-usuario.component';
 import { ModalPasswordComponent } from './modules/Custom/modal-password/modal-password.component';
 import { RecoverPasswordComponent } from './modules/recover-password/recover-password.component';
+import { ModalExitosoComponent } from './modules/Custom/modal-exitoso/modal-exitoso.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { RecoverPasswordComponent } from './modules/recover-password/recover-pas
     EditarUsuarioComponent,
     ModalPasswordComponent,
     RecoverPasswordComponent,
+    ModalExitosoComponent,
     
   ],
   imports: [

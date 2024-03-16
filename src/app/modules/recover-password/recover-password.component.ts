@@ -9,8 +9,21 @@ import { Component} from '@angular/core';
 export class RecoverPasswordComponent {
   password: string = '';
   showPassword: boolean = false;
+  tituloModal: string = '';
+  mensajeModal: string = '';
+  mostrarModal: boolean = false;
 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
+  }
+
+  abrirModalExitoso(): void {
+    this.tituloModal = 'Contraseña actualizada';
+    this.mensajeModal = 'Su contraseña se ha actualizado con éxito, presione volver para dirigirse al login.';
+    this.mostrarModal = true;
+  }
+
+  cerrarModal(): void {
+    this.mostrarModal = false;
   }
 }

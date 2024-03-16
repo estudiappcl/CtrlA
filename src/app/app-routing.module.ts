@@ -8,6 +8,7 @@ import { ConsultaIndividualComponent } from './modules/consulta-individual/consu
 import { ConsultaMasivaComponent } from './modules/consulta-masiva/consulta-masiva.component';
 import { IngresoIndividualComponent } from './modules/ingreso-individual/ingreso-individual.component';
 import { RecoverPasswordComponent } from './modules/recover-password/recover-password.component';
+import { ModalExitosoComponent } from "./modules/Custom/modal-exitoso/modal-exitoso.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'data-usuario-rut', component: DataUsuarioRutComponent },
   { path: 'ingreso-individual', component: IngresoIndividualComponent },
   { path: 'recover-password', component: RecoverPasswordComponent },
+  
 ];
 
 @NgModule({
