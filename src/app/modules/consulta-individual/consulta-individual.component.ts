@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-consulta-individual',
   templateUrl: './consulta-individual.component.html',
-  styleUrl: './consulta-individual.component.css'
+  styleUrls: ['./consulta-individual.component.css']
 })
 export class ConsultaIndividualComponent {
   breadcrumbs = [
@@ -13,8 +13,11 @@ export class ConsultaIndividualComponent {
   ];
 
   mostrarModalConsultaIndividual: boolean = false;
+  tipoConsulta: 'usuario' | 'agencia' | 'inventario' | null = null;
 
-  abrirModalConsultaIndividual(): void {
+  abrirModalConsultaIndividual(tipo: 'usuario' | 'agencia' | 'inventario'): void {
+    this.tipoConsulta = tipo;
+    console.log(this.tipoConsulta);
     this.mostrarModalConsultaIndividual = true;
   }
 

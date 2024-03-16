@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal-consulta-individual',
@@ -6,6 +6,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./modal-consulta-individual.component.css']
 })
 export class ModalConsultaIndividualComponent {
+  @Input() tipoConsulta: 'usuario' | 'agencia' | 'inventario' | null = null;
   @Output() cerrar = new EventEmitter<void>();
 
   cerrarModal(): void {

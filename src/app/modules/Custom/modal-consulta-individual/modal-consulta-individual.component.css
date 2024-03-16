@@ -40,6 +40,10 @@
     cursor: pointer;
   }
   
+  .input-color{
+    width: 65%;
+  }
+ 
   .button-group {
     display: flex;
     justify-content: space-between; /* Esto asegura que los botones estén separados y a cada extremo */
