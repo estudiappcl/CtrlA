@@ -2,6 +2,11 @@
   class="navbar navbar-light bg-light navbar-expand-lg sticky-top navbar-shadow-box"
 >
   <div class="container-md">
+    <app-modal-consulta-individual
+      *ngIf="mostrarModalConsultaIndividual"
+      (cerrar)="cerrarModalConsultaIndividual()"
+    >
+    </app-modal-consulta-individual>
     <a class="navbar-brand" href="#">
       <img
         src="../../../assets/image/Logo.jpg"
@@ -100,12 +105,13 @@
               </div>
               <div class="col-md-3 col-12 ps-0 mt-3 mt-md-0">
                 <div class="container">
+               
                   <button
                     pButton
-                    routerLink="/data-usuario-rut"
                     type="button"
                     label="Consultar"
                     class="consultar-button p-2 w-100"
+                    (click)="abrirModalConsultaIndividual()"
                   ></button>
                 </div>
               </div>
@@ -136,7 +142,7 @@
                 <div class="container">
                   <button
                     pButton
-                    routerLink="/data-usuario-rut"
+                    routerLink=""
                     type="button"
                     label="Consultar"
                     class="consultar-button p-2 w-100"
@@ -170,7 +176,7 @@
                 <div class="container">
                   <button
                     pButton
-                    routerLink="data-usuario-rut"
+                    routerLink=""
                     type="button"
                     label="Consultar"
                     class="consultar-button p-2 w-100"

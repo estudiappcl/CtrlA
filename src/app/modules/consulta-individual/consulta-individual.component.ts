@@ -11,4 +11,14 @@ export class ConsultaIndividualComponent {
     { text: 'Home', link: '/home' },
     { text: 'Consulta individual', link: '/consulta-individual' }
   ];
+
+  mostrarModalConsultaIndividual: boolean = false;
+
+  abrirModalConsultaIndividual(): void {
+    this.mostrarModalConsultaIndividual = true;
+  }
+
+  cerrarModalConsultaIndividual(): void {
+    this.mostrarModalConsultaIndividual = false;
+  }
 }

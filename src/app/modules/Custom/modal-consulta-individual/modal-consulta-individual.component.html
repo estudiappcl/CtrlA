@@ -1,0 +1,24 @@
+<div class="custom-modal">
+
+    <div class="custom-modal-content rounded-3 text-center">
+      <!-- <button class="close  " (click)="cerrarModal()">&times;</button> -->
+      <h4 class="my-2">Consulta individual</h4>
+      <p>Usuario / rut</p>
+      <div class="form-group mt-3"> <!-- Agrupa los selects -->
+        <div class="p-field mt-1">
+            <input
+              class="input-color"
+              id="username"
+              type="text"
+              pInputText
+              placeholder="Ingresa usuario o rut"
+            />
+          </div>
+      </div>
+      <div class="button-group d-flex justify-content-between mt-5 mb-3"> <!-- Ajusta margen superior -->
+        <button class="btn btn-outline " (click)="cerrarModal()">Volver</button>
+        <button class="btn btn-primary " >Buscar</button>
+      </div>
+    </div>
+  </div>
+  
