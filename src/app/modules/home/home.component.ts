@@ -12,4 +12,15 @@ export class HomeComponent {
    
   
   ];
+
+
+  mostrarModalConsultaMasiva: boolean = false;
+
+  abrirModalConsultaMasiva(): void {
+    this.mostrarModalConsultaMasiva = true;
+  }
+
+  cerrarModalConsultaMasiva(): void {
+    this.mostrarModalConsultaMasiva = false;
+  }
 }

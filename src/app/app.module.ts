@@ -25,6 +25,7 @@ import { RecoverPasswordComponent } from './modules/recover-password/recover-pas
 import { ModalExitosoComponent } from './modules/Custom/modal-exitoso/modal-exitoso.component';
 import { TableModule } from 'primeng/table';
 import { TablasComponent } from './modules/Custom/tablas/tablas.component';
+import { ModalConsultaMasivaComponent } from './modules/Custom/modal-consulta-masiva/modal-consulta-masiva.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { TablasComponent } from './modules/Custom/tablas/tablas.component';
     RecoverPasswordComponent,
     ModalExitosoComponent,
     TablasComponent,
+    ModalConsultaMasivaComponent,
     
     
   ],

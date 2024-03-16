@@ -1,6 +1,9 @@
 <nav
   class="navbar navbar-light bg-light navbar-expand-lg sticky-top navbar-shadow-box"
->
+><app-modal-consulta-masiva
+*ngIf="mostrarModalConsultaMasiva"
+(cerrar)="cerrarModalConsultaMasiva()">
+</app-modal-consulta-masiva>
   <div class="container-md">
     <a class="navbar-brand" href="#">
       <img
@@ -50,11 +53,14 @@
         </li>
       </ul>
     </div>
+    
   </div>
 </nav>
 
 <div class="container-md mb-5">
+
   <div class="frame mt-3" id="frame_middletop">
+   
     <div class="row">
       <div class="col mb-3">
         <h2 class="consultation-title">
@@ -178,14 +184,19 @@
                     <p class="m-auto">Contenido de la consulta masiva</p>
                   </div>
                   <div class="mt-auto">
-                    <button
-                      pButton
-                      routerLink="/consulta-masiva"
-                      type="button"
-                      label="Consultar"
-                      class="consultar-button w-100 p-2"
-                    ></button>
+                
+
+<button
+  pButton
+  type="button"
+  label="Consulta Masiva"
+  class="consultar-button w-100 p-2"
+  (click)="abrirModalConsultaMasiva()">
+</button>
+
+
                   </div>
+                  
                 </div>
               </div>
             </div>
@@ -217,7 +228,7 @@
                   <div class="mt-auto">
                     <button
                       pButton
-                      routerLink="/consulta-masiva"
+                      routerLink=""
                       type="button"
                       label="Consultar"
                       class="consultar-button w-100 p-2"
