@@ -15,12 +15,23 @@ export class HomeComponent {
 
 
   mostrarModalConsultaMasiva: boolean = false;
+  mostrarModalGestionUsuario: boolean = false;
 
+  //consulta masiva
   abrirModalConsultaMasiva(): void {
     this.mostrarModalConsultaMasiva = true;
   }
 
   cerrarModalConsultaMasiva(): void {
     this.mostrarModalConsultaMasiva = false;
+  }
+//gestion usuario
+
+  abrirModalGestionUsuario(): void {
+    this.mostrarModalGestionUsuario = true;
+  }
+
+  cerrarModalGestionUsuario(): void {
+    this.mostrarModalGestionUsuario = false;
   }
 }

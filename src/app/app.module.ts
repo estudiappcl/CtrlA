@@ -27,6 +27,7 @@ import { TableModule } from 'primeng/table';
 import { TablasComponent } from './modules/Custom/tablas/tablas.component';
 import { ModalConsultaMasivaComponent } from './modules/Custom/modal-consulta-masiva/modal-consulta-masiva.component';
 import { ModalConsultaIndividualComponent } from './modules/Custom/modal-consulta-individual/modal-consulta-individual.component';
+import { ModalGestionUsuarioComponent } from './modules/Custom/modal-gestion-usuario/modal-gestion-usuario.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ModalConsultaIndividualComponent } from './modules/Custom/modal-consult
     TablasComponent,
     ModalConsultaMasivaComponent,
     ModalConsultaIndividualComponent,
+    ModalGestionUsuarioComponent,
     
     
   ],
