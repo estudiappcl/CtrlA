@@ -28,6 +28,7 @@ import { TablasComponent } from './modules/Custom/tablas/tablas.component';
 import { ModalConsultaMasivaComponent } from './modules/Custom/modal-consulta-masiva/modal-consulta-masiva.component';
 import { ModalConsultaIndividualComponent } from './modules/Custom/modal-consulta-individual/modal-consulta-individual.component';
 import { ModalGestionUsuarioComponent } from './modules/Custom/modal-gestion-usuario/modal-gestion-usuario.component';
+import { ModalCargaMasivaComponent } from './modules/Custom/modal-carga-masiva/modal-carga-masiva.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ModalGestionUsuarioComponent } from './modules/Custom/modal-gestion-usu
     ModalConsultaMasivaComponent,
     ModalConsultaIndividualComponent,
     ModalGestionUsuarioComponent,
+    ModalCargaMasivaComponent,
     
     
   ],

@@ -16,6 +16,7 @@ export class HomeComponent {
 
   mostrarModalConsultaMasiva: boolean = false;
   mostrarModalGestionUsuario: boolean = false;
+  mostrarModalCargaMasiva: boolean = false;
 
   //consulta masiva
   abrirModalConsultaMasiva(): void {
@@ -33,5 +34,14 @@ export class HomeComponent {
 
   cerrarModalGestionUsuario(): void {
     this.mostrarModalGestionUsuario = false;
+  }
+
+  //carga masiva
+  abrirModalCargaMasiva(): void {
+    this.mostrarModalCargaMasiva = true;
+  }
+
+  cerrarModalCargaMasiva(): void {
+    this.mostrarModalCargaMasiva = false;
   }
 }
