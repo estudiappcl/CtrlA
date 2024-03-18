@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recover-password',
@@ -12,7 +12,7 @@ export class RecoverPasswordComponent {
   tituloModal: string = '';
   mensajeModal: string = '';
   mostrarModal: boolean = false;
-
+  constructor(private router: Router) {} 
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
   }
@@ -25,5 +25,6 @@ export class RecoverPasswordComponent {
 
   cerrarModal(): void {
     this.mostrarModal = false;
+    this.router.navigate(['/login']);
   }
 }
