@@ -11,4 +11,16 @@ export class DataUsuarioRutComponent {
     { text: 'Consulta individual', link: '/consulta-individual' },
     { text: 'Usuario-rut', link: '/data-rut-usuario' },
   ];
+
+  mostrarModalHistorialEquipo: boolean = false;
+
+  //consulta masiva
+  abrirModalHistorialEquipo(): void {
+    this.mostrarModalHistorialEquipo = true;
+  }
+
+  cerrarModalHistorialEquipo(): void {
+    this.mostrarModalHistorialEquipo = false;
+  }
+
 }

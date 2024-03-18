@@ -2,6 +2,12 @@
   class="navbar navbar-light bg-light navbar-expand-lg sticky-top navbar-shadow-box"
 >
   <div class="container-md">
+    <app-modal-historial-equipo
+*ngIf="mostrarModalHistorialEquipo"
+(cerrar)="cerrarModalHistorialEquipo()"
+>
+</app-modal-historial-equipo>
+
     <a class="navbar-brand" href="#">
       <img
         src="../../../assets/image/Logo.svg"
@@ -130,10 +136,11 @@
               <div class="col-12 col-md-4 mb-3 pe-md-0">
                 <button
                   pButton
-                  routerLink=""
+               
                   type="button"
                   label="Ver Historial"
                   class="historial-button p-2 w-100"
+                  (click)="abrirModalHistorialEquipo()"
                 ></button>
               </div>
             </div>
@@ -180,7 +187,7 @@
               <div class="col-12 col-md-4 mb-3 pe-md-0">
                 <button
                   pButton
-                  routerLink=""
+                 
                   type="button"
                   label="Ver Historial"
                   class="historial-button p-2 w-100"
