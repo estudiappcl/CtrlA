@@ -79,12 +79,22 @@
     font-weight: 500;
     border-color: #FFA500; 
   }
+
   .btn-primary {
     background-color: #34AA4E; 
     color: white; 
     font-weight: 500;
     border-color: #34AA4E; 
   }
+
+  .btn-disabled {
+    background-color: #EAEAEA;
+    color: #ccc; /* Un color más claro para el texto que sugiere que el botón está desactivado */
+    border-color: #EAEAEA;
+    pointer-events: none; /* Desactiva la interacción con el botón */
+    cursor: default;
+  }
+  
   .btn-fixed-width {
     width: 150px; /* Ajusta este valor según necesites */
 }

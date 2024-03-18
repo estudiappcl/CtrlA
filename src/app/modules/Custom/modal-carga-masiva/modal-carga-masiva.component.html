@@ -2,16 +2,23 @@
     <div class="custom-modal-content rounded-3 text-center">
         <h2 class="title">Carga masiva</h2>
         <p class="description">Arrastra al recuadro o haz click en él para cargar tu archivo en formato Excel</p>
-        <div class="upload-box">
+        <div class="upload-box" (click)="fileInput.click()">
+            <input type="file" #fileInput style="display: none" (change)="onFileSelected($event)" accept=".xlsx, .xls"/>
             <p class="upload-text"> <img src="../../../../assets/image/uploadBig.svg" class="imagen"></p>
+        </div>
+        <div *ngIf="fileLoading" class="progress-bar">
+            Cargando archivo...
+        </div>
+        <div *ngIf="fileLoaded && !fileLoading" class="progress-bar">
+            Archivo cargado
         </div>
         <div class="button-group d-flex justify-content-between">
             <button class="btn btn-outline mt-5 btn-fixed-width" (click)="cerrarModal()">Volver</button>
-            <button class="btn btn-primary mt-5 btn-fixed-width">
+            <button [class.btn-disabled]="!fileLoaded" class="btn btn-primary mt-5 btn-fixed-width" (click)="onUpload()">
                 <img src="../../../../assets/image/upload.svg" class="imagen">
                 Subir
             </button>
+            
         </div>
-        
     </div>
 </div>
