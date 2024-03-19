@@ -9,6 +9,7 @@ import { ConsultaMasivaComponent } from './modules/consulta-masiva/consulta-masi
 import { IngresoIndividualComponent } from './modules/ingreso-individual/ingreso-individual.component';
 import { RecoverPasswordComponent } from './modules/recover-password/recover-password.component';
 import { ModalExitosoComponent } from "./modules/Custom/modal-exitoso/modal-exitoso.component";
+import { EditarUsuarioComponent } from './modules/editar-usuario/editar-usuario.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'data-usuario-rut', component: DataUsuarioRutComponent },
   { path: 'ingreso-individual', component: IngresoIndividualComponent },
   { path: 'recover-password', component: RecoverPasswordComponent },
+  { path: 'editar-usuario', component: EditarUsuarioComponent },
   
 ];
 

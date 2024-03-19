@@ -1,21 +1,46 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+
+interface Consulta {
+  inventario: number;
+  equipo: string;
+  dcp: string;
+  agencia: string;
+  empresa: string;
+  usuario: string;
+  modelo: string;
+}
 
 @Component({
   selector: 'app-tablas',
   templateUrl: './tablas.component.html',
   styleUrl: './tablas.component.css'
 })
-export class TablasComponent {
-  products = [
-    { "id": 1, "tipo": "Máquina 1", "sistema": "Sistema 1", "version": "Versión 1", "uso": "Uso 1", "precio": 100 },
-    { "id": 2, "tipo": "Máquina 2", "sistema": "Sistema 2", "version": "Versión 2", "uso": "Uso 2", "precio": 200 },
-    { "id": 3, "tipo": "Máquina 3", "sistema": "Sistema 3", "version": "Versión 3", "uso": "Uso 3", "precio": 300 },
-    { "id": 4, "tipo": "Máquina 4", "sistema": "Sistema 4", "version": "Versión 4", "uso": "Uso 4", "precio": 400 },
-    { "id": 5, "tipo": "Máquina 5", "sistema": "Sistema 5", "version": "Versión 5", "uso": "Uso 5", "precio": 500 },
-    { "id": 6, "tipo": "Máquina 6", "sistema": "Sistema 6", "version": "Versión 6", "uso": "Uso 6", "precio": 600 },
-    { "id": 7, "tipo": "Máquina 7", "sistema": "Sistema 7", "version": "Versión 7", "uso": "Uso 7", "precio": 700 },
-    { "id": 8, "tipo": "Máquina 8", "sistema": "Sistema 8", "version": "Versión 8", "uso": "Uso 8", "precio": 800 },
-    { "id": 9, "tipo": "Máquina 9", "sistema": "Sistema 9", "version": "Versión 9", "uso": "Uso 9", "precio": 900 },
-    { "id": 10, "tipo": "Máquina 10", "sistema": "Sistema 10", "version": "Versión 10", "uso": "Uso 10", "precio": 1000 }
-  ];
+export class TablasComponent  implements AfterViewInit {
+  displayedColumns: string[] = ['inventario', 'equipo', 'dcp', 'agencia', 'empresa', 'usuario','modelo'];
+  dataSource = new MatTableDataSource<Consulta>([
+    { inventario: 101, equipo: 'Laptop Pro', dcp: 'DCP001', agencia: 'Agencia A', empresa: 'Empresa Uno', usuario: 'user01', modelo: 'X1000' },
+  { inventario: 102, equipo: 'Desktop Power', dcp: 'DCP002', agencia: 'Agencia B', empresa: 'Empresa Dos', usuario: 'user02', modelo: 'D2000' },
+  { inventario: 103, equipo: 'Monitor Ultra', dcp: 'DCP003', agencia: 'Agencia C', empresa: 'Empresa Tres', usuario: 'user03', modelo: 'M3000' },
+  { inventario: 104, equipo: 'Server Max', dcp: 'DCP004', agencia: 'Agencia D', empresa: 'Empresa Cuatro', usuario: 'user04', modelo: 'S4000' },
+  { inventario: 105, equipo: 'Printer Plus', dcp: 'DCP005', agencia: 'Agencia E', empresa: 'Empresa Cinco', usuario: 'user05', modelo: 'P5000' },
+  { inventario: 106, equipo: 'Router Speed', dcp: 'DCP006', agencia: 'Agencia F', empresa: 'Empresa Seis', usuario: 'user06', modelo: 'R6000' },
+  { inventario: 107, equipo: 'Switch Net', dcp: 'DCP007', agencia: 'Agencia G', empresa: 'Empresa Siete', usuario: 'user07', modelo: 'SW7000' },
+  { inventario: 108, equipo: 'Laptop Lite', dcp: 'DCP008', agencia: 'Agencia H', empresa: 'Empresa Ocho', usuario: 'user08', modelo: 'L8000' },
+  { inventario: 109, equipo: 'Tablet Touch', dcp: 'DCP009', agencia: 'Agencia I', empresa: 'Empresa Nueve', usuario: 'user09', modelo: 'T9000' },
+  { inventario: 110, equipo: 'Smartphone Smart', dcp: 'DCP010', agencia: 'Agencia J', empresa: 'Empresa Diez', usuario: 'user10', modelo: 'SM10000' }
+    // Agrega más usuarios según sea necesario
+  ]);
+
+  
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  
+  
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+
+  }
 }

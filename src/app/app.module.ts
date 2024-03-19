@@ -24,12 +24,17 @@ import { ModalPasswordComponent } from './modules/Custom/modal-password/modal-pa
 import { RecoverPasswordComponent } from './modules/recover-password/recover-password.component';
 import { ModalExitosoComponent } from './modules/Custom/modal-exitoso/modal-exitoso.component';
 import { TableModule } from 'primeng/table';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 import { TablasComponent } from './modules/Custom/tablas/tablas.component';
 import { ModalConsultaMasivaComponent } from './modules/Custom/modal-consulta-masiva/modal-consulta-masiva.component';
 import { ModalConsultaIndividualComponent } from './modules/Custom/modal-consulta-individual/modal-consulta-individual.component';
 import { ModalGestionUsuarioComponent } from './modules/Custom/modal-gestion-usuario/modal-gestion-usuario.component';
 import { ModalCargaMasivaComponent } from './modules/Custom/modal-carga-masiva/modal-carga-masiva.component';
 import { ModalHistorialEquipoComponent } from './modules/Custom/modal-historial-equipo/modal-historial-equipo.component';
+import { TablasEditarUsuarioComponent } from './modules/tablas-editar-usuario/tablas-editar-usuario.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -51,6 +56,7 @@ import { ModalHistorialEquipoComponent } from './modules/Custom/modal-historial-
     ModalGestionUsuarioComponent,
     ModalCargaMasivaComponent,
     ModalHistorialEquipoComponent,
+    TablasEditarUsuarioComponent,
     
     
   ],
@@ -67,9 +73,14 @@ import { ModalHistorialEquipoComponent } from './modules/Custom/modal-historial-
     DividerModule,
     CalendarModule,
     FormsModule,
-    TableModule
+    TableModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
