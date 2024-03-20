@@ -50,6 +50,10 @@ export class TablasEditarUsuarioComponent implements AfterViewInit {
     // Lógica para editar el usuario
     console.log('Editando usuario:', user);
   }
+
+
+  tituloModalExito: string = '';
+  mensajeModalExito: string = '';
   mostrarModalExito: boolean = false;
   mostrarModalEliminar: boolean = false; // Asegúrate de que esta propiedad exista
  
@@ -58,12 +62,19 @@ export class TablasEditarUsuarioComponent implements AfterViewInit {
   }
 
   cerrarModalEliminar(): void {
+    // Solo cierra el modal de eliminar
     this.mostrarModalEliminar = false;
   }
-
   // Métodos para manejar el modal de éxito, si decides implementarlo
   abrirModalExito(): void {
+    this.tituloModalExito = 'Éxito';
+    this.mensajeModalExito = 'Usuario JPerez ha sido eliminado con éxito.';
     this.mostrarModalExito = true;
+    // Asegúrate de que el modal de eliminación está cerrado
+    this.mostrarModalEliminar = false;
+    
+    // Luego establece el estado para mostrar el modal de éxito
+  
   }
 
   cerrarModalExito(): void {
@@ -71,13 +82,13 @@ export class TablasEditarUsuarioComponent implements AfterViewInit {
   }
 
 
-  eliminarUsuario(user: Usuario) {
-    // Lógica para eliminar el usuario aquí
-    console.log('Eliminando usuario:', user);
-    // Cierra primero el modal de eliminar
-    this.cerrarModalEliminar();
-    // Luego abre el modal de éxito
-    this.abrirModalExito();
-  }
+ 
+eliminarUsuario(user: Usuario) {
+  // Lógica para eliminar el usuario aquí
+  console.log('Eliminando usuario:', user);
+  // Cierra primero el modal de eliminar
+  this.cerrarModalEliminar();
+  // No necesitas abrir el modal de éxito aquí, esto se manejará con el evento exito
+}
   
 }

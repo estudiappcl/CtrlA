@@ -1,8 +1,19 @@
 <div class="mat-elevation-z0 rounded-5 shadow">
   <app-modal-eliminar
   *ngIf="mostrarModalEliminar"
-  (cerrar)="cerrarModalEliminar()">
+  (cerrar)="cerrarModalEliminar()"
+  (exito)="abrirModalExito()"> <!-- Este manejará la apertura del modal de éxito -->
 </app-modal-eliminar>
+
+<!-- Asegúrate de que el modal de éxito también está en tu componente padre y se muestra basado en mostrarModalExito -->
+<app-modal-exitoso
+  *ngIf="mostrarModalExito"
+  [titulo]="tituloModalExito"
+  [mensajeModal]="mensajeModalExito"
+  (cerrar)="cerrarModalExito()"> <!-- Este manejará el cierre del modal de éxito -->
+</app-modal-exitoso>
+
+
     <div class="table-responsive">
     <table mat-table [dataSource]="dataSource" >
         <ng-container matColumnDef="usuario"> 
