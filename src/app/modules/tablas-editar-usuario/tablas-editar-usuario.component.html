@@ -17,7 +17,7 @@
 *ngIf="mostrarModalEditar"
 (cerrar)="cerrarModalEditar()"
 [mensajeModalEditar]="mensajeModalEditar"
-(exito)="abrirModalExito()"> <!-- Este manejará la apertura del modal de éxito -->
+(exitoEditar)="onEditarUsuarioExitoso()">
 </app-modal-editar>
     <div class="table-responsive">
     <table mat-table [dataSource]="dataSource" >
