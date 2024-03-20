@@ -36,6 +36,8 @@ import { ModalHistorialEquipoComponent } from './modules/Custom/modal-historial-
 import { TablasEditarUsuarioComponent } from './modules/tablas-editar-usuario/tablas-editar-usuario.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ModalResumenIngresoIndividualComponent } from './modules/Custom/modal-resumen-ingreso-individual/modal-resumen-ingreso-individual.component';
+import { ModalEliminarComponent } from './modules/Custom/modal-eliminar/modal-eliminar.component';
+import { ModalEditarComponent } from './modules/Custom/modal-editar/modal-editar.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { ModalResumenIngresoIndividualComponent } from './modules/Custom/modal-r
     ModalHistorialEquipoComponent,
     TablasEditarUsuarioComponent,
     ModalResumenIngresoIndividualComponent,
+    ModalEliminarComponent,
+    ModalEditarComponent,
     
     
   ],

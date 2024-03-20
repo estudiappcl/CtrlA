@@ -1,7 +1,7 @@
 .custom-modal {
   display: flex; /* Usa flexbox para centrar el contenido del modal */
   position: fixed; /* Posición fija respecto al viewport */
-  z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+  z-index: 2000; /* Asegura que el modal esté por encima de otros elementos */
   left: 0;
   top: 0;
   width: 100%; /* Usa el 100% del ancho del viewport */
@@ -34,6 +34,7 @@
   color: #333;
   cursor: pointer;
 }
+
 .btn {
   font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
   border-radius: 20px; /* Los bordes redondeados según la imagen */

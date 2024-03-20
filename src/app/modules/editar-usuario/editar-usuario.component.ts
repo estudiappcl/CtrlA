@@ -23,4 +23,5 @@ export class EditarUsuarioComponent   {
     { text: 'Home', link: '/home' },
     { text: 'editar-usuario', link: '/editar-usuario' }
   ];
+
 }

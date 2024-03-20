@@ -1,4 +1,24 @@
 <div class="mat-elevation-z0 rounded-5 shadow">
+  <app-modal-eliminar
+  *ngIf="mostrarModalEliminar"
+  (cerrar)="cerrarModalEliminar()"
+  (exito)="abrirModalExito()"> <!-- Este manejará la apertura del modal de éxito -->
+</app-modal-eliminar>
+
+<!-- Asegúrate de que el modal de éxito también está en tu componente padre y se muestra basado en mostrarModalExito -->
+<app-modal-exitoso
+  *ngIf="mostrarModalExito"
+  [titulo]="tituloModalExito"
+  [mensajeModal]="mensajeModalExito"
+  (cerrar)="cerrarModalExito()"> <!-- Este manejará el cierre del modal de éxito -->
+</app-modal-exitoso>
+
+<app-modal-editar
+*ngIf="mostrarModalEditar"
+(cerrar)="cerrarModalEditar()"
+[mensajeModalEditar]="mensajeModalEditar"
+(exitoEditar)="onEditarUsuarioExitoso()">
+</app-modal-editar>
     <div class="table-responsive">
     <table mat-table [dataSource]="dataSource" >
         <ng-container matColumnDef="usuario"> 
@@ -29,8 +49,8 @@
       <ng-container matColumnDef="acciones">
         <th mat-header-cell *matHeaderCellDef class="rounded-header last-header color-headers text-center text-light"> Acciones </th>
         <td mat-cell *matCellDef="let element" class="text-center">
-          <button mat-button (click)="editarUsuario(element)">Editar</button>
-          <button mat-button (click)="eliminarUsuario(element)">Eliminar</button>
+          <button mat-button (click)="editarUsuario(element)" (click)="abrirModalEditar()" >Editar</button>
+          <button mat-button (click)="eliminarUsuario(element)"(click)="abrirModalEliminar()">Eliminar</button>
         </td>
       </ng-container>
   
