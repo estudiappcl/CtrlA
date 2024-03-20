@@ -12,8 +12,7 @@ export class ModalEliminarComponent {
   @Output() cerrar = new EventEmitter<void>();
   @Output() exito = new EventEmitter<void>(); 
   abrirModalExitoso(): void {
-    this.tituloModal = 'Eliminar usuario';
-    this.mensajeModal = 'Usuario JPerez ha sido eliminado con éxito.';
+  
     this.exito.emit(); 
     
   }

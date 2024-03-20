@@ -49,17 +49,34 @@ export class TablasEditarUsuarioComponent implements AfterViewInit {
   editarUsuario(user: Usuario) {
     // Lógica para editar el usuario
     console.log('Editando usuario:', user);
+    this.cerrarModalEditar();
   }
 
 
   tituloModalExito: string = '';
   mensajeModalExito: string = '';
+  mensajeModalEditar: string = '';
   mostrarModalExito: boolean = false;
+  mostrarModalEditar: boolean = false;
   mostrarModalEliminar: boolean = false; // Asegúrate de que esta propiedad exista
  
+  //editar
+  abrirModalEditar(): void {
+    this.mostrarModalEditar = true;
+    this.mensajeModalEditar = 'Juan Pérez';
+  }
+
+  cerrarModalEditar(): void {
+    // Solo cierra el modal de eliminar
+    this.mostrarModalEditar = false;
+ 
+  }
+
+  //eliminar
   abrirModalEliminar(): void {
     this.mostrarModalEliminar = true;
   }
+  
 
   cerrarModalEliminar(): void {
     // Solo cierra el modal de eliminar
