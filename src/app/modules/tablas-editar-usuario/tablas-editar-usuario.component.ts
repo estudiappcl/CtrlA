@@ -55,4 +55,15 @@ export class TablasEditarUsuarioComponent implements AfterViewInit {
     // Lógica para eliminar el usuario
     console.log('Eliminando usuario:', user);
   }
+  
+  mostrarModalEliminar: boolean = false;
+
+  //consulta eliminar
+  abrirModalEliminar(): void {
+    this.mostrarModalEliminar = true;
+  }
+
+  cerrarModalEliminar(): void {
+    this.mostrarModalEliminar = false;
+  }
 }
