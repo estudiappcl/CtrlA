@@ -35,6 +35,7 @@ import { ModalCargaMasivaComponent } from './modules/Custom/modal-carga-masiva/m
 import { ModalHistorialEquipoComponent } from './modules/Custom/modal-historial-equipo/modal-historial-equipo.component';
 import { TablasEditarUsuarioComponent } from './modules/tablas-editar-usuario/tablas-editar-usuario.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ModalResumenIngresoIndividualComponent } from './modules/Custom/modal-resumen-ingreso-individual/modal-resumen-ingreso-individual.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     ModalCargaMasivaComponent,
     ModalHistorialEquipoComponent,
     TablasEditarUsuarioComponent,
+    ModalResumenIngresoIndividualComponent,
     
     
   ],

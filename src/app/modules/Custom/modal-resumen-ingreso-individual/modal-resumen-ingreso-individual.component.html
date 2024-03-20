@@ -1,0 +1,41 @@
+<div class="custom-modal">
+    <div class="custom-modal-content rounded-3 text-center">
+        <h5 class="my-3">Resumen Ingreso Individual</h5>
+       
+        <div class="row">
+          <!-- Columna izquierda -->
+          <div class="col-md-3 ">
+            <div class="form-group ps-4 pe-2">
+              <label for="fecha">Fecha:</label>
+              <p id="fecha">28/08/2023</p>
+            </div>
+          </div>
+          <!-- Columna derecha -->
+          <div class="col-md-3 ">
+            <div class="form-group  ps-2 pe-2">
+              <label for="registroPor">Registro por:</label>
+              <p id="registroPor">Nicolas Álvarez</p>
+            </div>
+            <!-- Repetir para cada campo en la columna derecha -->
+          </div>
+          <div class="col-md-3 ps-2 pe-4">
+            <div class="form-group">
+              <label for="registroPor">Registro por:</label>
+              <p id="registroPor">Nicolas Álvarez</p>
+            </div>
+            <!-- Repetir para cada campo en la columna derecha -->
+          </div>
+        </div>
+       <hr>
+  
+       
+
+
+
+        <div class="modal-footer mt-0 pt-0">
+          <button class="btn btn-outline my-3 px-1" (click)="cerrarModal()">Volver</button>
+          <button type="button" class="btn btn-primary px-1" routerLink="/recover-password">Continuar</button>
+        </div>
+      </div>
+    </div>
+    

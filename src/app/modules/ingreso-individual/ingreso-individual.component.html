@@ -2,6 +2,13 @@
   class="navbar navbar-light bg-light navbar-expand-lg sticky-top navbar-shadow-box"
 >
   <div class="container-md">
+    <app-modal-resumen-ingreso-individual
+*ngIf="mostrarModalResumenIngresoIndividual"
+(cerrar)="cerrarModalResumenIngresoIndividual()"
+>
+</app-modal-resumen-ingreso-individual>
+
+
     <a class="navbar-brand" href="#">
       <img
         src="../../../assets/image/Logo.svg"
@@ -344,9 +351,9 @@
 
         <button
           pButton
-          routerLink="/home"
           type="button"
           label="Ingresar"
+          (click)="abrirModalResumenIngresoIndividual()"
           class="search-button px-5 py-2"
         ></button>
       </div>

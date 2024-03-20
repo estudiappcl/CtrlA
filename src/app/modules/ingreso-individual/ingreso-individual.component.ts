@@ -12,4 +12,15 @@ export class IngresoIndividualComponent {
     { text: 'Ingreso individual', link: '/ingreso-individual' }
   
   ];
+
+  mostrarModalResumenIngresoIndividual: boolean = false;
+  
+  //consulta masiva
+  abrirModalResumenIngresoIndividual(): void {
+    this.mostrarModalResumenIngresoIndividual = true;
+  }
+
+  cerrarModalResumenIngresoIndividual(): void {
+    this.mostrarModalResumenIngresoIndividual = false;
+  }
 }
