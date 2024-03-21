@@ -14,6 +14,8 @@
         </div>
         <div class="button-group d-flex justify-content-between">
             <button class="btn btn-outline mt-3 btn-fixed-width" (click)="cerrarModal()">Volver</button>
+            <button class="btn btn-outline mt-3 btn-fixed-width" (click)="abrirDuplicados()">Ver duplicados</button>
+
             <button [class.btn-disabled]="!fileLoaded" class="btn btn-primary mt-3 btn-fixed-width" (click)="onUpload()">
                 <img src="../../../../assets/image/upload.svg" class="imagen">
                 Subir

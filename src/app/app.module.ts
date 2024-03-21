@@ -42,6 +42,7 @@ import { NewlinePipe, TablasHistorialEquipoComponent } from './modules/tablas-hi
 import { getSpanishPaginatorIntl } from './modules/tablas-historial-equipo/tablas-historial-equipo.component';
 import { EquiposDuplicadosComponent } from './modules/equipos-duplicados/equipos-duplicados.component';
 import { TablaEquiposDuplicadosComponent } from './modules/tabla-equipos-duplicados/tabla-equipos-duplicados.component';
+import { ModalDuplicadoComponent } from './modules/Custom/modal-duplicado/modal-duplicado.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { TablaEquiposDuplicadosComponent } from './modules/tabla-equipos-duplica
     TablasHistorialEquipoComponent,
     NewlinePipe,
     EquiposDuplicadosComponent,
-    TablaEquiposDuplicadosComponent
+    TablaEquiposDuplicadosComponent,
+    ModalDuplicadoComponent
     
     
   ],

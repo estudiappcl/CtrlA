@@ -15,11 +15,16 @@
 </app-modal-gestion-usuario>
 
 <app-modal-carga-masiva
-*ngIf="mostrarModalCargaMasiva"
-(cerrar)="cerrarModalCargaMasiva()"
+  *ngIf="mostrarModalCargaMasiva"
+  (cerrar)="cerrarModalCargaMasiva()"
+  (abrirModalDuplicados)="abrirModalDuplicados()"
 >
 </app-modal-carga-masiva>
 
+<app-modal-duplicado
+  *ngIf="mostrarModalDuplicados"
+  (cerrar)="cerrarModalDuplicados()"
+></app-modal-duplicado>
 
 
   <div class="container-md">

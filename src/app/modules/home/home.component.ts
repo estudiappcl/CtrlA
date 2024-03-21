@@ -17,7 +17,15 @@ export class HomeComponent {
   mostrarModalConsultaMasiva: boolean = false;
   mostrarModalGestionUsuario: boolean = false;
   mostrarModalCargaMasiva: boolean = false;
+  mostrarModalDuplicados: boolean = false;
 
+  abrirModalDuplicados(): void {
+    this.mostrarModalDuplicados = true;
+  }
+
+  cerrarModalDuplicados(): void {
+    this.mostrarModalDuplicados = false;
+  }
   //consulta masiva
   abrirModalConsultaMasiva(): void {
     this.mostrarModalConsultaMasiva = true;
