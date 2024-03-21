@@ -24,8 +24,15 @@
 <app-modal-duplicado
   *ngIf="mostrarModalDuplicados"
   (cerrar)="cerrarModalDuplicados()"
+  (reemplazar)="manejarReemplazo()"
 ></app-modal-duplicado>
 
+<app-modal-exitoso
+  *ngIf="mostrarModalExito"
+  [titulo]="tituloModalExito"
+  [mensajeModal]="mensajeModalExito"
+  (cerrar)="cerrarModalExito()"
+></app-modal-exitoso>
 
   <div class="container-md">
     <a class="navbar-brand" href="#">

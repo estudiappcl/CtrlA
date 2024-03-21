@@ -18,6 +18,10 @@ export class HomeComponent {
   mostrarModalGestionUsuario: boolean = false;
   mostrarModalCargaMasiva: boolean = false;
   mostrarModalDuplicados: boolean = false;
+  mostrarModalExito: boolean = false;
+
+  tituloModalExito: string = '';
+  mensajeModalExito: string = '';
 
   abrirModalDuplicados(): void {
     this.mostrarModalDuplicados = true;
@@ -52,4 +56,19 @@ export class HomeComponent {
   cerrarModalCargaMasiva(): void {
     this.mostrarModalCargaMasiva = false;
   }
+
+  manejarReemplazo(): void {
+    // Antes de mostrar el modal exitoso, asigna los valores deseados a las propiedades
+    this.tituloModalExito = 'Equipos Reemplazados';
+    this.mensajeModalExito = 'Los equipos fueron reemplazados con exito.';
+
+    this.mostrarModalDuplicados = false; // Cerrar modal de duplicados
+    this.mostrarModalExito = true; // Abrir modal exitoso
+  }
+
+  cerrarModalExito(): void {
+    this.mostrarModalExito = false;
+  }
+
+
 }
