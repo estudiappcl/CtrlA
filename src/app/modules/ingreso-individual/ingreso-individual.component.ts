@@ -13,8 +13,20 @@ export class IngresoIndividualComponent {
   
   ];
 
+  tituloModalExito: string = ''; 
+  mensajeModalExito: string = ''; 
+
+  mostrarModalExito: boolean = false; 
   mostrarModalResumenIngresoIndividual: boolean = false;
-  
+  abrirModalExito(): void {
+    this.mostrarModalResumenIngresoIndividual = false; // Cierra el modal actual
+    this.tituloModalExito = 'Ingreso Individual';
+    this.mensajeModalExito = 'El ingreso individual se ha realizado con éxito.';
+    // Configura y abre el modal de éxito
+    this.mostrarModalExito = true;
+    // Aquí puedes configurar el mensaje y título del modal de éxito si es necesario
+  }
+ 
   //consulta masiva
   abrirModalResumenIngresoIndividual(): void {
     this.mostrarModalResumenIngresoIndividual = true;
@@ -22,5 +34,9 @@ export class IngresoIndividualComponent {
 
   cerrarModalResumenIngresoIndividual(): void {
     this.mostrarModalResumenIngresoIndividual = false;
+  }
+
+  cerrarModalExito(): void {
+    this.mostrarModalExito = false;
   }
 }
