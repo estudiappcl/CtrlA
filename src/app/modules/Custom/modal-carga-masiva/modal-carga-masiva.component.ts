@@ -7,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ModalCargaMasivaComponent {
   @Output() cerrar = new EventEmitter<void>();
+  @Output() abrirModalDuplicados = new EventEmitter<void>(); 
   fileLoaded: boolean = false;
   fileLoading: boolean = false;
   showUploadButton: boolean = false;
@@ -37,5 +38,10 @@ export class ModalCargaMasivaComponent {
 
   cerrarModal(): void {
     this.cerrar.emit();
+  }
+  
+  abrirDuplicados(): void {
+    this.cerrarModal(); // Cerrar este modal primero
+    this.abrirModalDuplicados.emit(); // Luego emitir evento para abrir modal de duplicados
   }
 }
