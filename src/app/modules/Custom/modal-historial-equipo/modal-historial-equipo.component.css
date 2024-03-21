@@ -16,10 +16,10 @@
     background-color: #fefefe;
     padding: 2rem; /* Ajusta el padding para que sea uniforme y no muy grande */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 50%; /* Esto dependerá del ancho que desees, pero 50% es un buen punto de partida */
-    max-width: 600px; /* También puedes establecer un max-width para evitar que sea muy grande en pantallas anchas */
+    width: 75%; /* Esto dependerá del ancho que desees, pero 50% es un buen punto de partida */
+    max-width: 800px; /* También puedes establecer un max-width para evitar que sea muy grande en pantallas anchas */
     border-radius: 1rem; /* Esto dará los bordes redondeados */
-    transform: translateY(-25%);
+    transform: translateY(0%);
     position: fixed;
   }
   
@@ -127,4 +127,8 @@
         margin: 0 5px; /* En dispositivos móviles, reduce el margen */
         max-width: calc(50% - 10px); /* Y ajusta el ancho máximo acorde */
       }
+  }
+
+  .container-fluid.no-padding{
+    padding: 0 !important;
   }

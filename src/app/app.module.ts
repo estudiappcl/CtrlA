@@ -25,7 +25,7 @@ import { RecoverPasswordComponent } from './modules/recover-password/recover-pas
 import { ModalExitosoComponent } from './modules/Custom/modal-exitoso/modal-exitoso.component';
 import { TableModule } from 'primeng/table';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { TablasComponent } from './modules/Custom/tablas/tablas.component';
 import { ModalConsultaMasivaComponent } from './modules/Custom/modal-consulta-masiva/modal-consulta-masiva.component';
@@ -38,6 +38,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ModalResumenIngresoIndividualComponent } from './modules/Custom/modal-resumen-ingreso-individual/modal-resumen-ingreso-individual.component';
 import { ModalEliminarComponent } from './modules/Custom/modal-eliminar/modal-eliminar.component';
 import { ModalEditarComponent } from './modules/Custom/modal-editar/modal-editar.component';
+import { NewlinePipe, TablasHistorialEquipoComponent } from './modules/tablas-historial-equipo/tablas-historial-equipo.component';
+import { getSpanishPaginatorIntl } from './modules/tablas-historial-equipo/tablas-historial-equipo.component';
+
 
 @NgModule({
   declarations: [
@@ -63,6 +66,8 @@ import { ModalEditarComponent } from './modules/Custom/modal-editar/modal-editar
     ModalResumenIngresoIndividualComponent,
     ModalEliminarComponent,
     ModalEditarComponent,
+    TablasHistorialEquipoComponent,
+    NewlinePipe
     
     
   ],
@@ -85,7 +90,9 @@ import { ModalEditarComponent } from './modules/Custom/modal-editar/modal-editar
     MatSortModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    { provide: MatPaginatorIntl, useValue: getSpanishPaginatorIntl() }
+    
   ],
   bootstrap: [AppComponent],
 })
