@@ -1,9 +1,14 @@
 .search-button {
     border: none;
     border-radius: 100px;
-    background-color: green;
+    background-color: #34AA4E;
     color: white;
     font-family: 'Roboto';
+}
+
+.search-button:hover {
+  background-color: #2C8C40; /* Un verde más oscuro para el efecto hover */
+  border-color: #2C8C40; /* Asegúrate de que el color del borde también cambie para mantener la coherencia */
 }
 
 .large-checkbox {
