@@ -10,6 +10,7 @@ import { IngresoIndividualComponent } from './modules/ingreso-individual/ingreso
 import { RecoverPasswordComponent } from './modules/recover-password/recover-password.component';
 import { ModalExitosoComponent } from "./modules/Custom/modal-exitoso/modal-exitoso.component";
 import { EditarUsuarioComponent } from './modules/editar-usuario/editar-usuario.component';
+import { EquiposDuplicadosComponent } from './modules/equipos-duplicados/equipos-duplicados.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'ingreso-individual', component: IngresoIndividualComponent },
   { path: 'recover-password', component: RecoverPasswordComponent },
   { path: 'editar-usuario', component: EditarUsuarioComponent },
+  { path: 'equipos-duplicados', component: EquiposDuplicadosComponent },
   
 ];
 

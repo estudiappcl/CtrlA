@@ -40,6 +40,8 @@ import { ModalEliminarComponent } from './modules/Custom/modal-eliminar/modal-el
 import { ModalEditarComponent } from './modules/Custom/modal-editar/modal-editar.component';
 import { NewlinePipe, TablasHistorialEquipoComponent } from './modules/tablas-historial-equipo/tablas-historial-equipo.component';
 import { getSpanishPaginatorIntl } from './modules/tablas-historial-equipo/tablas-historial-equipo.component';
+import { EquiposDuplicadosComponent } from './modules/equipos-duplicados/equipos-duplicados.component';
+import { TablaEquiposDuplicadosComponent } from './modules/tabla-equipos-duplicados/tabla-equipos-duplicados.component';
 
 
 @NgModule({
@@ -67,7 +69,9 @@ import { getSpanishPaginatorIntl } from './modules/tablas-historial-equipo/tabla
     ModalEliminarComponent,
     ModalEditarComponent,
     TablasHistorialEquipoComponent,
-    NewlinePipe
+    NewlinePipe,
+    EquiposDuplicadosComponent,
+    TablaEquiposDuplicadosComponent
     
     
   ],
