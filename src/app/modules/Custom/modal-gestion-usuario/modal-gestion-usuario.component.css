@@ -19,7 +19,7 @@
     width: 50%; /* Esto dependerá del ancho que desees, pero 50% es un buen punto de partida */
     max-width: 600px; /* También puedes establecer un max-width para evitar que sea muy grande en pantallas anchas */
     border-radius: 1rem; /* Esto dará los bordes redondeados */
-    transform: translateY(-25%);
+    transform: translateY(0%);
     position: fixed;
   }
   

@@ -16,7 +16,7 @@
   background-color: #fefefe;
   padding: 0.9375rem 7.525rem;
   border: 1px solid #34AA4E;
-  transform: translateY(-25%);
+  transform: translateY(0%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* Ajusta el ancho y la altura del contenido del modal según necesites */
   width: auto; /* O un ancho fijo si es necesario */
