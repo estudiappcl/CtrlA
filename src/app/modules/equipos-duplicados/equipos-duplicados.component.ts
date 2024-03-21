@@ -12,6 +12,19 @@ export class EquiposDuplicadosComponent {
   ];
   displayedColumns: string[] = ['nombreEquipo', 'codigoInventario', 'datosModificados'];
 
+
+  mostrarModalExito: boolean = false; // Controla la visibilidad del modal exitoso
+  tituloModalExito: string = 'Equipos reemplazados'; // Título para el modal exitoso
+  mensajeModalExito: string = 'Los equipos fueron reemplazados con éxito'; // Mensaje para el modal exitoso
+  
+  abrirModalExito(): void {
+    this.mostrarModalExito = true;
+  }
+
+  cerrarModalExito(): void {
+    this.mostrarModalExito = false;
+  }
+
   // Define tus datos de consulta aquí
   datos: Consulta[] = [
     { 

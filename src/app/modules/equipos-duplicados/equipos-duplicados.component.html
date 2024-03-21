@@ -2,6 +2,12 @@
   class="navbar navbar-light bg-light navbar-expand-lg sticky-top navbar-shadow-box"
 >
   <div class="container-md">
+    <app-modal-exitoso
+  *ngIf="mostrarModalExito"
+  [titulo]="tituloModalExito"
+  [mensajeModal]="mensajeModalExito"
+  (cerrar)="cerrarModalExito()"
+></app-modal-exitoso>
     <a class="navbar-brand" href="#">
       <img
         src="../../../assets/image/Logo.svg"
@@ -104,6 +110,7 @@
             type="button"
             label="Reemplazar"
             class="search-button px-5 py-2"
+            (click)="abrirModalExito()"
           ></button>
         </div>
       </div>
