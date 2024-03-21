@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Consulta } from '../tabla-equipos-duplicados/tabla-equipos-duplicados.component'; // Asegúrate de importar el tipo de datos Consulta
 
 @Component({
@@ -12,7 +13,7 @@ export class EquiposDuplicadosComponent {
     { text: 'Equipos duplicados', link: '/equipos-duplicados' },
   ];
   displayedColumns: string[] = ['nombreEquipo', 'codigoInventario', 'datosModificados'];
-
+  constructor(private router: Router) {} 
 
   mostrarModalExito: boolean = false; // Controla la visibilidad del modal exitoso
   tituloModalExito: string = 'Equipos reemplazados'; // Título para el modal exitoso
@@ -24,6 +25,7 @@ export class EquiposDuplicadosComponent {
 
   cerrarModalExito(): void {
     this.mostrarModalExito = false;
+    this.router.navigate(['/home']);
   }
 
   // Define tus datos de consulta aquí
