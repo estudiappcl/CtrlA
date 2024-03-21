@@ -76,7 +76,10 @@
     justify-content: center; /* Centra el contenido del botón horizontalmente */
   }
   
-  
+  .btn-primary:hover {
+    background-color: #3072BF; /* Un azul más oscuro para el hover */
+    border-color: #3072BF; /* Asegúrate de que el color del borde también cambie para mantener la consistencia */
+}
   /* Ajusta el ancho de los botones si es necesario */
 
   

@@ -43,3 +43,7 @@
     border-radius: 100px;
 
   }
+  .historial-button:hover {
+    background-color: #3072BF; /* Un azul más oscuro para el hover */
+    border-color: #3072BF; /* Asegúrate de que el color del borde también cambie para mantener la consistencia */
+}

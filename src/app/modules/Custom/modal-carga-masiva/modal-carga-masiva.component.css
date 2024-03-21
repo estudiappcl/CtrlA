@@ -85,8 +85,12 @@
     color: white; 
     font-weight: 500;
     border-color: #34AA4E; 
+    
   }
-
+  .btn-primary:hover {
+    background-color: #2C8C40; /* Un verde más oscuro para el efecto hover */
+    border-color: #2C8C40; /* Asegúrate de que el color del borde también cambie para mantener la coherencia */
+}
   .btn-disabled {
     background-color: #EAEAEA;
     color: #ccc; /* Un color más claro para el texto que sugiere que el botón está desactivado */
