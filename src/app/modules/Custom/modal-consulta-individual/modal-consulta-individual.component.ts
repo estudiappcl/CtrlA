@@ -18,10 +18,10 @@ export class ModalConsultaIndividualComponent {
       this.router.navigate(['/data-usuario-rut']);
     } else if (this.tipoConsulta === 'agencia') {
       // Navega a la ruta para consulta de agencia/DPC
-      this.router.navigate(['/agencia-dcp']);
+      this.router.navigate(['/data-agencia-dcp']);
     } else if (this.tipoConsulta === 'inventario') {
       // Navega a la ruta para consulta de número de inventario
-      this.router.navigate(['/numero-inventario']);
+      this.router.navigate(['/data-numero-inventario']);
     }
   }
 }
