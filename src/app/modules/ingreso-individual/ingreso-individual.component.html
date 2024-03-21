@@ -5,9 +5,16 @@
     <app-modal-resumen-ingreso-individual
 *ngIf="mostrarModalResumenIngresoIndividual"
 (cerrar)="cerrarModalResumenIngresoIndividual()"
+(exito)="abrirModalExito()">
 >
 </app-modal-resumen-ingreso-individual>
-
+<app-modal-exitoso
+  *ngIf="mostrarModalExito"
+  [titulo]="tituloModalExito"
+  [mensajeModal]="mensajeModalExito"
+  (cerrar)="cerrarModalExito()"> 
+  
+</app-modal-exitoso>
 
     <a class="navbar-brand" href="#">
       <img
