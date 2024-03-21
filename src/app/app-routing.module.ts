@@ -13,6 +13,7 @@ import { EditarUsuarioComponent } from './modules/editar-usuario/editar-usuario.
 import { EquiposDuplicadosComponent } from './modules/equipos-duplicados/equipos-duplicados.component';
 import { NumeroInventarioComponent } from './modules/numero-inventario/numero-inventario.component';
 import { AgenciaDcpComponent } from './modules/agencia-dcp/agencia-dcp.component';
+import { IngresarUsuarioComponent } from './modules/ingresar-usuario/ingresar-usuario.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'ingreso-individual', component: IngresoIndividualComponent },
   { path: 'recover-password', component: RecoverPasswordComponent },
   { path: 'editar-usuario', component: EditarUsuarioComponent },
+  { path: 'ingresar-usuario', component: IngresarUsuarioComponent },
   { path: 'equipos-duplicados', component: EquiposDuplicadosComponent },
   
 ];

@@ -45,6 +45,7 @@ import { TablaEquiposDuplicadosComponent } from './modules/tabla-equipos-duplica
 import { AgenciaDcpComponent } from './modules/agencia-dcp/agencia-dcp.component';
 import { NumeroInventarioComponent } from './modules/numero-inventario/numero-inventario.component';
 import { ModalDuplicadoComponent } from './modules/Custom/modal-duplicado/modal-duplicado.component';
+import { IngresarUsuarioComponent } from './modules/ingresar-usuario/ingresar-usuario.component';
 
 
 @NgModule({
@@ -77,7 +78,8 @@ import { ModalDuplicadoComponent } from './modules/Custom/modal-duplicado/modal-
     TablaEquiposDuplicadosComponent,
     AgenciaDcpComponent,
     NumeroInventarioComponent,
-    ModalDuplicadoComponent
+    ModalDuplicadoComponent,
+    IngresarUsuarioComponent
     
     
   ],
