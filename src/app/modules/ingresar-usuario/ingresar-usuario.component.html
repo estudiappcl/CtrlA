@@ -2,6 +2,12 @@
   class="navbar navbar-light bg-light navbar-expand-lg sticky-top navbar-shadow-box"
 >
   <div class="container-md">
+    <app-modal-exitoso
+  *ngIf="mostrarModalExito"
+  [titulo]="tituloModalExito"
+  [mensajeModal]="mensajeModalExito"
+  (cerrar)="cerrarModalExito()"
+></app-modal-exitoso>
     <a class="navbar-brand" href="#">
       <img
         src="../../../assets/image/Logo.svg"
@@ -109,8 +115,8 @@
         </span>
       </div>
       <div class="col-md-4 d-flex justify-content-end align-items-end">
-        <button pButton type="button" class="search-button px-5 py-2 mb-3 ">
-        Ingresar
+        <button pButton type="button" class="search-button px-5 py-2 mb-3" (click)="abrirModalExito()">
+          Ingresar
         </button>
       </div>
     </div>
