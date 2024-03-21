@@ -11,6 +11,8 @@ import { RecoverPasswordComponent } from './modules/recover-password/recover-pas
 import { ModalExitosoComponent } from "./modules/Custom/modal-exitoso/modal-exitoso.component";
 import { EditarUsuarioComponent } from './modules/editar-usuario/editar-usuario.component';
 import { EquiposDuplicadosComponent } from './modules/equipos-duplicados/equipos-duplicados.component';
+import { NumeroInventarioComponent } from './modules/numero-inventario/numero-inventario.component';
+import { AgenciaDcpComponent } from './modules/agencia-dcp/agencia-dcp.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -20,6 +22,9 @@ const routes: Routes = [
   { path: 'consulta-individual', component: ConsultaIndividualComponent },
   { path: 'consulta-masiva', component: ConsultaMasivaComponent },
   { path: 'data-usuario-rut', component: DataUsuarioRutComponent },
+  { path: 'data-numero-inventario', component: NumeroInventarioComponent },
+  { path: 'data-agencia-dcp', component: AgenciaDcpComponent  },
+  { path: 'equipos-duplicados', component: EquiposDuplicadosComponent },
   { path: 'ingreso-individual', component: IngresoIndividualComponent },
   { path: 'recover-password', component: RecoverPasswordComponent },
   { path: 'editar-usuario', component: EditarUsuarioComponent },

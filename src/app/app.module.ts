@@ -42,6 +42,8 @@ import { NewlinePipe, TablasHistorialEquipoComponent } from './modules/tablas-hi
 import { getSpanishPaginatorIntl } from './modules/tablas-historial-equipo/tablas-historial-equipo.component';
 import { EquiposDuplicadosComponent } from './modules/equipos-duplicados/equipos-duplicados.component';
 import { TablaEquiposDuplicadosComponent } from './modules/tabla-equipos-duplicados/tabla-equipos-duplicados.component';
+import { AgenciaDcpComponent } from './modules/agencia-dcp/agencia-dcp.component';
+import { NumeroInventarioComponent } from './modules/numero-inventario/numero-inventario.component';
 
 
 @NgModule({
@@ -71,7 +73,9 @@ import { TablaEquiposDuplicadosComponent } from './modules/tabla-equipos-duplica
     TablasHistorialEquipoComponent,
     NewlinePipe,
     EquiposDuplicadosComponent,
-    TablaEquiposDuplicadosComponent
+    TablaEquiposDuplicadosComponent,
+    AgenciaDcpComponent,
+    NumeroInventarioComponent
     
     
   ],
