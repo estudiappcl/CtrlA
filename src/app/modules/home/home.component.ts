@@ -70,5 +70,13 @@ export class HomeComponent {
     this.mostrarModalExito = false;
   }
 
+  finalizarCargaMasivaConExito(): void {
+    // Asigna los valores al título y mensaje del modal exitoso
+    this.tituloModalExito = 'Carga Masiva';
+    this.mensajeModalExito = 'Ingreso masivo realizado con exito.';
+  
+    this.mostrarModalCargaMasiva = false; // Cierra el modal de carga masiva
+    this.mostrarModalExito = true; // Abre el modal exitoso
+  }
 
 }

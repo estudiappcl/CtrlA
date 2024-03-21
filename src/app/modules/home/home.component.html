@@ -18,9 +18,9 @@
   *ngIf="mostrarModalCargaMasiva"
   (cerrar)="cerrarModalCargaMasiva()"
   (abrirModalDuplicados)="abrirModalDuplicados()"
+  (cargaExitosa)="finalizarCargaMasivaConExito()"
 >
 </app-modal-carga-masiva>
-
 <app-modal-duplicado
   *ngIf="mostrarModalDuplicados"
   (cerrar)="cerrarModalDuplicados()"

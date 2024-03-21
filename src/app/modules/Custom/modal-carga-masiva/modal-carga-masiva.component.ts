@@ -8,6 +8,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class ModalCargaMasivaComponent {
   @Output() cerrar = new EventEmitter<void>();
   @Output() abrirModalDuplicados = new EventEmitter<void>(); 
+  @Output() cargaExitosa = new EventEmitter<void>(); 
   fileLoaded: boolean = false;
   fileLoading: boolean = false;
   showUploadButton: boolean = false;
@@ -32,8 +33,9 @@ export class ModalCargaMasivaComponent {
   }
 
   onUpload(): void {
-    // Aquí puedes redirigir a otra vista o realizar otra acción
     console.log('Archivo listo para la siguiente acción');
+    // Simula la lógica de carga aquí, y luego emite el evento de carga exitosa
+    this.cargaExitosa.emit(); // Emitir evento al completar la carga exitosamente
   }
 
   cerrarModal(): void {
