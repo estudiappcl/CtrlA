@@ -9,6 +9,7 @@ import { Consulta } from '../tabla-equipos-duplicados/tabla-equipos-duplicados.c
 export class EquiposDuplicadosComponent {
   breadcrumbs = [
     { text: 'Home', link: '/home' },
+    { text: 'Equipos duplicados', link: '/equipos-duplicados' },
   ];
   displayedColumns: string[] = ['nombreEquipo', 'codigoInventario', 'datosModificados'];
 
