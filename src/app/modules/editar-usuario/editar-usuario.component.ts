@@ -21,7 +21,7 @@ export class EditarUsuarioComponent   {
 
   breadcrumbs = [
     { text: 'Home', link: '/home' },
-    { text: 'editar-usuario', link: '/editar-usuario' }
+    { text: 'Editar Usuario', link: '/editar-usuario' }
   ];
 
 }

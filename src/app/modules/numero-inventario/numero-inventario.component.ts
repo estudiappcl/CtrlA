@@ -9,7 +9,7 @@ export class NumeroInventarioComponent {
   breadcrumbs = [
     { text: 'Home', link: '/home' },
     { text: 'Consulta individual', link: '/consulta-individual' },
-    { text: 'Número-inventario', link: '/data-numero-inventario' },
+    { text: 'Número de inventario', link: '/data-numero-inventario' },
   ];
 
   mostrarModalHistorialEquipo: boolean = false;

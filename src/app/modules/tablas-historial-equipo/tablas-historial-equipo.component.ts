@@ -45,7 +45,7 @@ export const ELEMENT_DATA1: Element[] = [
   {
     fecha: '15/04/2023',
     razonUsuario:
-      'INVENTARIO Equipo por "Nicolas Álvarez" a través de carga masiva',
+      'TABLA DE INVENTARIO Equipo por "Nicolas Álvarez" a través de carga masiva',
   },
   { fecha: '15/04/2023', razonUsuario: 'Incidente equipo ticket 103945' },
   {
@@ -63,7 +63,7 @@ export const ELEMENT_DATA1: Element[] = [
 export const ELEMENT_DATA2: Element[] = [
   {
     fecha: '15/04/2023',
-    razonUsuario: 'DCP Equipo por "Nicolas Álvarez" a través de carga masiva',
+    razonUsuario: 'TABLA DE DCP Equipo por "Nicolas Álvarez" a través de carga masiva',
   },
   { fecha: '15/04/2023', razonUsuario: 'Incidente equipo ticket 103945' },
   {
@@ -81,7 +81,7 @@ export const ELEMENT_DATA2: Element[] = [
 export const ELEMENT_DATA3: Element[] = [
   {
     fecha: '15/04/2023',
-    razonUsuario: 'RUT Equipo por "Nicolas Álvarez" a través de carga masiva',
+    razonUsuario: 'TABLA DE RUT Equipo por "Nicolas Álvarez" a través de carga masiva',
   },
   { fecha: '15/04/2023', razonUsuario: 'Incidente equipo ticket 103945' },
   {
