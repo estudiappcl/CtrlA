@@ -46,6 +46,8 @@ import { AgenciaDcpComponent } from './modules/agencia-dcp/agencia-dcp.component
 import { NumeroInventarioComponent } from './modules/numero-inventario/numero-inventario.component';
 import { ModalDuplicadoComponent } from './modules/Custom/modal-duplicado/modal-duplicado.component';
 import { IngresarUsuarioComponent } from './modules/ingresar-usuario/ingresar-usuario.component';
+import { ModalHistorialEquipoDcpComponent } from './modules/Custom/modal-historial-equipo-dcp/modal-historial-equipo-dcp.component';
+import { ModalHistorialEquipoInventarioComponent } from './modules/Custom/modal-historial-equipo-inventario/modal-historial-equipo-inventario.component';
 
 
 @NgModule({
@@ -79,7 +81,9 @@ import { IngresarUsuarioComponent } from './modules/ingresar-usuario/ingresar-us
     AgenciaDcpComponent,
     NumeroInventarioComponent,
     ModalDuplicadoComponent,
-    IngresarUsuarioComponent
+    IngresarUsuarioComponent,
+    ModalHistorialEquipoDcpComponent,
+    ModalHistorialEquipoInventarioComponent
     
     
   ],
