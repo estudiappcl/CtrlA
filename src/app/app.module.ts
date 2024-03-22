@@ -7,6 +7,8 @@ import { LoginComponent } from './modules/login/login.component';
 import { HomeComponent } from './modules/home/home.component';
 import { ForgotPasswordComponent } from './modules/forgot-password/forgot-password.component';
 import { DataUsuarioRutComponent } from './modules/data-usuario-rut/data-usuario-rut.component';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
@@ -90,7 +92,13 @@ import { ModalHistorialEquipoInventarioComponent } from './modules/Custom/modal-
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule, // Añade AppRoutingModule aquí
+    AppRoutingModule,
+    FormsModule,
+    InputTextModule,
+    PasswordModule,
+    ButtonModule,
+    MessagesModule,
+    MessageModule, // Añade AppRoutingModule aquí
     CardModule,
     ButtonModule,
     InputTextModule,
