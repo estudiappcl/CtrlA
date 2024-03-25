@@ -7,35 +7,34 @@
   >
   </app-modal-consulta-masiva>
 
-  
   <app-modal-gestion-usuario
-  *ngIf="mostrarModalGestionUsuario"
-  (cerrar)="cerrarModalGestionUsuario()"
->
-</app-modal-gestion-usuario>
+    *ngIf="mostrarModalGestionUsuario"
+    (cerrar)="cerrarModalGestionUsuario()"
+  >
+  </app-modal-gestion-usuario>
 
-<app-modal-carga-masiva
-  *ngIf="mostrarModalCargaMasiva"
-  (cerrar)="cerrarModalCargaMasiva()"
-  (abrirModalDuplicados)="abrirModalDuplicados()"
-  (cargaExitosa)="finalizarCargaMasivaConExito()"
->
-</app-modal-carga-masiva>
-<app-modal-duplicado
-  *ngIf="mostrarModalDuplicados"
-  (cerrar)="cerrarModalDuplicados()"
-  (reemplazar)="manejarReemplazo()"
-></app-modal-duplicado>
+  <app-modal-carga-masiva
+    *ngIf="mostrarModalCargaMasiva"
+    (cerrar)="cerrarModalCargaMasiva()"
+    (abrirModalDuplicados)="abrirModalDuplicados()"
+    (cargaExitosa)="finalizarCargaMasivaConExito()"
+  >
+  </app-modal-carga-masiva>
+  <app-modal-duplicado
+    *ngIf="mostrarModalDuplicados"
+    (cerrar)="cerrarModalDuplicados()"
+    (reemplazar)="manejarReemplazo()"
+  ></app-modal-duplicado>
 
-<app-modal-exitoso
-  *ngIf="mostrarModalExito"
-  [titulo]="tituloModalExito"
-  [mensajeModal]="mensajeModalExito"
-  (cerrar)="cerrarModalExito()"
-></app-modal-exitoso>
+  <app-modal-exitoso
+    *ngIf="mostrarModalExito"
+    [titulo]="tituloModalExito"
+    [mensajeModal]="mensajeModalExito"
+    (cerrar)="cerrarModalExito()"
+  ></app-modal-exitoso>
 
   <div class="container-md">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="home">
       <img
         src="../../../assets/image/Logo.svg"
         alt="User Icon"
@@ -47,8 +46,8 @@
     <button
       class="navbar-toggler"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbarCollapse"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -57,9 +56,11 @@
       id="navbarCollapse"
     >
       <ul class="navbar-nav">
-        <li>
-          <p-divider class="" layout="vertical"></p-divider>
+        <li class="d-none d-lg-block">
+          <p-divider layout="vertical"></p-divider>
         </li>
+        
+        
         <li class="navbar-item d-lg-block d-none">
           <p class="nav-link text-end">Perfil</p>
           <ul class="navbar-nav">
@@ -116,28 +117,34 @@
         <div class="row">
           <div class="col my-2">
             <div class="d-flex justify-content-evenly align-items-center h-100">
-              
               <button
                 pButton
                 type="button"
                 class="consultar-button w-auto px-4"
                 (click)="abrirModalCargaMasiva()"
               >
-              <img src="../../../assets/image/upload.svg" class="imagen pe-2">
-                Carga Masiva
+                <img
+                  src="../../../assets/image/upload.svg"
+                  class="imagen pe-lg-2"
+                />
+
+                <span class="d-none d-lg-inline">Carga Masiva</span>
               </button>
-              
+
               <button
                 pButton
                 type="button"
                 class="consultar-button w-auto px-4"
                 (click)="abrirModalGestionUsuario()"
               >
-              <img src="../../../assets/image/userlogo.svg" class="imagen pe-2">
-              Gestión usuario</button>
+                <img
+                  src="../../../assets/image/userlogo.svg"
+                  class="imagen pe-lg-2"
+                />
+                <span class="d-none d-lg-inline">Gestión usuario</span>
+              </button>
             </div>
           </div>
-        
         </div>
       </div>
     </div>
@@ -206,7 +213,7 @@
                     <button
                       pButton
                       type="button"
-                      label="Consulta Masiva"
+                      label="Consultar"
                       class="consultar-button w-100 p-2"
                       (click)="abrirModalConsultaMasiva()"
                     ></button>
