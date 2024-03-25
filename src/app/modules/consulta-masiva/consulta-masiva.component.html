@@ -139,17 +139,23 @@
   <div class="container-fluid tabla my-2 px-0">
     <hr *ngIf="!showTable" />
     <app-tablas *ngIf="showTable"></app-tablas>
-    <div class="row my-4">
-      <div class="col-md-3 col-12 px-0 mx-0">
-        <div class="container px-0 mx-0">
-          <button
-            pButton
-            routerLink="/home"
-            type="button"
-            label="Volver"
-            class="back-button p-2 w-100"
-          ></button>
-        </div>
+    <div class="row my-4 d-flex justify-content-between">
+      <div class="col-12 col-md-2 mb-3 ">
+        <button
+          pButton
+          routerLink="/home"
+          type="button"
+          label="Volver"
+          class="back-button p-2 w-100"
+        ></button>
+      </div>
+      <div *ngIf="showTable" class="col-12 col-md-2 mb-3">
+        <button
+          pButton
+          type="button"
+          label="Excel"
+          class="search-button p-2 w-100"
+        ></button>
       </div>
     </div>
   </div>
