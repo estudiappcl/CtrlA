@@ -1,36 +1,72 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-
+import { Component, Output, EventEmitter , ViewChild, ElementRef, AfterViewInit,ChangeDetectorRef } from '@angular/core';
+import Dropzone from 'dropzone';
 @Component({
   selector: 'app-modal-carga-masiva',
   templateUrl: './modal-carga-masiva.component.html',
-  styleUrl: './modal-carga-masiva.component.css'
+  styleUrls: ['./modal-carga-masiva.component.css']
 })
-export class ModalCargaMasivaComponent {
+export class ModalCargaMasivaComponent implements AfterViewInit {
   @Output() cerrar = new EventEmitter<void>();
   @Output() abrirModalDuplicados = new EventEmitter<void>(); 
   @Output() cargaExitosa = new EventEmitter<void>(); 
-  fileLoaded: boolean = false;
+  @ViewChild('fileDropzone', { static: false }) fileDropzone!: ElementRef;
+  @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
+  // Add properties to track the file name and size
+  fileName: string = '';
+  fileSize: string = '';
+  progress: number = 0;
+
   fileLoading: boolean = false;
+  fileLoaded: boolean = false;
   showUploadButton: boolean = false;
-  
-  onFileSelected(event: Event): void {
-    const element = event.target as HTMLInputElement;
-    const file = element.files ? element.files[0] : null;
-    if (file) {
-      // Simular carga de archivo
-      console.log('Archivo seleccionado:', file.name);
-      this.simulateFileLoad();
-    }
+
+  ngAfterViewInit(): void {
+    // Intentionally blank if not used
   }
 
-  simulateFileLoad(): void {
-    this.fileLoading = true; // Comenzamos la simulación de carga
-    setTimeout(() => {
-      this.fileLoading = false; // Terminamos la simulación de carga
+
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length) {
+        const file = input.files[0];
+        this.fileName = file.name;
+        // Convert bytes to KB and round to 2 decimal places
+        this.fileSize = (file.size / 1024).toFixed(2) + ' KB';
+        this.simulateFileLoad(file);
+    }
+}
+simulateFileLoad(file: File): void {
+  this.fileLoading = true;
+  this.fileName = file.name;
+  this.fileSize = (file.size / 1024).toFixed(2) + ' KB';
+  
+  // Reset progress to 0
+  this.progress = 0;
+  
+  // Start the simulation of the progress
+  let interval = setInterval(() => {
+    this.progress += 10;
+    if (this.progress >= 100) {
+      clearInterval(interval);
+      this.fileLoading = false;
       this.fileLoaded = true;
-      this.showUploadButton = true;
-    }, 2000); // Simula un tiempo de carga de 2 segundos
-  }
+      // Set the progress to 100% for the full progress bar
+      this.progress = 100;
+    }
+  }, 200); // Adjust the interval time to control the speed of the progress bar
+}
+deleteFile(): void {
+  // Logic to handle file deletion
+  this.fileLoaded = false;
+  this.fileName = '';
+  this.fileSize = '';
+  
+  // Clear the input
+  const input = this.fileInput.nativeElement;
+  input.value = '';
+  input.dispatchEvent(new Event('change'));
+}
 
   onUpload(): void {
     console.log('Archivo listo para la siguiente acción');
@@ -38,6 +74,7 @@ export class ModalCargaMasivaComponent {
     this.cargaExitosa.emit(); // Emitir evento al completar la carga exitosamente
   }
 
+  
   cerrarModal(): void {
     this.cerrar.emit();
   }
