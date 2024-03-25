@@ -13,6 +13,8 @@
 
         <p-card class="row justify-content-center">
           <form class="p-fluid">
+            <div *ngIf="errorLogin" class="p-error mt-3">Usuario o contraseña incorrectos.</div>
+            
             <div class="p-field mt-3">
               <input
                 class="input-color"
@@ -20,19 +22,21 @@
                 type="text"
                 pInputText
                 placeholder="Correo corporativo"
+                [(ngModel)]="usuario"
+                name="usuario"
               />
             </div>
+  
             <div class="p-field mt-3">
-              <p-password class="input-color" placeholder="Contraseña" [toggleMask]="true" [feedback]="false"></p-password>
-
+              <p-password class="input-color" placeholder="Contraseña" [(ngModel)]="password" name="password" [toggleMask]="true" [feedback]="false"></p-password>
             </div>
             
             <button
               pButton
-              routerLink="/home"
               type="button"
               label="Iniciar Sesión"
               class="p-button-rounded mt-5"
+              (click)="validarLogin()"
             ></button>
           </form>
           <div class="p-field mt-3">

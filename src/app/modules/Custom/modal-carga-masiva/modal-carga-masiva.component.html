@@ -9,9 +9,11 @@
             <p class="upload-text">
                 <!-- Include an upload icon here -->
                 <img src="../../../../assets/image/uploadBig.svg" alt="Upload icon">
+
             </p>
+
         </div>
-        
+        <div class="progress-bar-full" [style.width]="'0%'"></div>
         <!-- Información de progreso y botones -->
         <div *ngIf="fileLoading" class="progress-bar-container">
             <div class="progress-bar" [style.width]="progress + '%'"></div>
@@ -34,9 +36,9 @@
           
           
         <div class="button-group d-flex justify-content-between">
-            <button class="btn btn-outline mt-3 btn-fixed-width" (click)="cerrarModal()">Volver</button>
-            <button class="btn btn-outline mt-3 btn-fixed-width" (click)="abrirDuplicados()">Ver duplicados</button>
-            <button [class.btn-disabled]="!fileLoaded" class="btn btn-primary mt-3 btn-fixed-width" (click)="onUpload()">Subir</button>
+            <button class="btn btn-outline mt-3 " (click)="cerrarModal()">Volver</button>
+            <button class="btn btn-outline mt-3 " (click)="abrirDuplicados()">Ver duplicados</button>
+            <button [class.btn-disabled]="!fileLoaded" class="btn btn-primary mt-3 " (click)="onUpload()">Subir</button>
         </div>
     </div>
 </div>

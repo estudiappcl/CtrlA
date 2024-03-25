@@ -2,8 +2,7 @@
   class="navbar navbar-light bg-light navbar-expand-lg sticky-top navbar-shadow-box"
 >
   <div class="container-md">
-
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="home">
       <img
         src="../../../assets/image/Logo.svg"
         alt="User Icon"
@@ -15,8 +14,8 @@
     <button
       class="navbar-toggler"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbarCollapse"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,8 +24,8 @@
       id="navbarCollapse"
     >
       <ul class="navbar-nav">
-        <li>
-          <p-divider class="" layout="vertical"></p-divider>
+        <li class="d-none d-lg-block">
+          <p-divider layout="vertical"></p-divider>
         </li>
         <li class="navbar-item d-lg-block d-none">
           <p class="nav-link text-end">Perfil</p>
@@ -64,7 +63,7 @@
             height="16"
             class=""
           />
-          Editar usuario
+        Editar usuario
         </h2>
 
         <nav aria-label="breadcrumb">
@@ -81,52 +80,42 @@
         </nav>
       </div>
     </div>
+
     <div class="row mb-3">
-      <div class="col-md-12 mt-4 mt-md-0">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4 mb-3 ps-0">
-              <!-- Dropdown para el tipo de máquina -->
-              <form class="p-fluid">
-                <div class="p-inputgroup mt-3 position-relative">
-                  <input
-                    class="input-color rounded-5"
-                    id="search_username"
-                    type="text"
-                    pInputText
-                    placeholder="Nombre o rut del usuario"
-                  />
-                  <img
-                    (click)="onSearch()"
-                    src="../../../assets/image/searchIcon.svg"
-                    alt="Search Icon"
-                    class="custom-input-icon"
-                  />
-                </div>
-              </form>
-            </div>
+      <div class="col-md-4 mt-4 mb-3 mt-md-0">
+        <!-- Dropdown para el uso -->
+        <form class="p-fluid">
+          <div class="p-inputgroup mt-3 position-relative">
+            <input
+              class="input-color rounded-5"
+              id="search_username"
+              type="text"
+              pInputText
+              placeholder="Nombre o rut del usuario"
+            />
+            <img
+              (click)="onSearch()"
+              src="../../../assets/image/searchIcon.svg"
+              alt="Search Icon"
+              class="custom-input-icon"
+            />
           </div>
-        </div>
+        </form>
       </div>
-      <div class="container-fluid my-2 p-5">
-
-   <hr *ngIf="!showTable" />
-   <app-tablas-editar-usuario *ngIf="showTable"></app-tablas-editar-usuario>
- </div>
- 
-
-      <div class="row mt-3">
-        <div class="col-md-3 col-12">
-          <div class="container px-0 mx-0">
-            <button
-              pButton
-              routerLink="/home"
-              type="button"
-              label="Volver"
-              class="back-button p-2 w-100"
-            ></button>
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="container-fluid no-tabla my-2">
+    <hr *ngIf="!showTable" />
+    <app-tablas-editar-usuario *ngIf="showTable"></app-tablas-editar-usuario>
+    <div class="row my-4 d-flex justify-content-between">
+      <div class="col-12 col-md-2 mb-3">
+        <button
+          pButton
+          routerLink="/home"
+          type="button"
+          label="Volver"
+          class="back-button p-2 w-100"
+        ></button>
       </div>
     </div>
   </div>

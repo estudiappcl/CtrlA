@@ -21,8 +21,4 @@
   }
   
   
-  
-  #custom-paginator-container mat-paginator {
-    width: 100% !important; /* Extiende el paginador para que ocupe todo el ancho disponible */
-  }
-  
+

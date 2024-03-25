@@ -8,7 +8,7 @@
 >
 </app-modal-historial-equipo-inventario>
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="home">
       <img
         src="../../../assets/image/Logo.svg"
         alt="User Icon"
@@ -17,11 +17,11 @@
         class="d-inline-block align-text-top user-logo"
       />
     </a>
-    <button
+<button
       class="navbar-toggler"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbarCollapse"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,8 +30,8 @@
       id="navbarCollapse"
     >
       <ul class="navbar-nav">
-        <li>
-          <p-divider class="" layout="vertical"></p-divider>
+        <li class="d-none d-lg-block">
+          <p-divider layout="vertical"></p-divider>
         </li>
         <li class="navbar-item d-lg-block d-none">
           <p class="nav-link text-end">Perfil</p>
@@ -69,7 +69,7 @@
             height="16"
             class=""
           />
-          Consulta Individual
+         Número de inventario
         </h2>
 
         <nav aria-label="breadcrumb">
@@ -88,8 +88,8 @@
 
       <div class="col-md-6 col-sm-12">
         <div class="profile-details text-md-end">
-          <p class="mb-0">Juan Perez</p>
-          <p class="mb-0">10.923.948-8</p>
+          <p class="mb-0">Workstation</p>
+          <p class="mb-0">IP: 10.160.216.28</p>
           <p class="mb-0">Empresa: Starken</p>
         </div>
       </div>
@@ -132,8 +132,8 @@
                 />
               </div>
             </div>
-            <div class="row mt-3">
-              <div class="col-12 col-md-4 mb-3 pe-md-0">
+            <div class="row mt-3 d-flex justify-content-between">
+              <div class="col-12 col-md-4 mb-3 pe-md-0 ">
                 <button
                   pButton
                
@@ -142,12 +142,23 @@
                   class="historial-button p-2 w-100"
                   (click)="abrirModalHistorialEquipo()"
                 ></button>
+               
+              </div>
+              <div class="col-12 col-md-4 mb-3 ps-md-0 ">
+                <button
+                pButton
+             
+                type="button"
+                label="Ver equipo"
+                class="equipo-button p-2 w-100 rounded-5"
+                (click)="abrirModalHistorialEquipo()"
+              ></button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 mt-4 mt-md-0">
+      <div class="col-md-6">
         <div class="card border rounded card-shadow-box">
           <div class="card-body">
             <div class="row">
@@ -162,13 +173,12 @@
             </div>
             <div class="row mt-3">
               <div class="col-4">
-                <p><strong>Equipo:</strong> Escáner</p>
-                <p><strong>Marca:</strong> Epson</p>
-                <p><strong>Modelo:</strong> ES-500W</p>
-                <p><strong>Caja:</strong> No</p>
-                <p><strong>Ubicación:</strong> Escritorio</p>
+                <p><strong>Equipo:</strong> Impresora</p>
+                <p><strong>Marca:</strong> Sewoo</p>
+                <p><strong>Modelo:</strong> SPL-430</p>
+                <p><strong>Caja:</strong> Si</p>
+                <p><strong>Ubicación:</strong> Caja 1</p>
               </div>
-              
               <div class="col-4">
                 <p><strong>Número CI:</strong> 30120</p>
                 <p><strong>Agencia:</strong> Central</p>
@@ -184,16 +194,27 @@
                 />
               </div>
             </div>
-            <div class="row mt-3">
-              <div class="col-12 col-md-4 mb-3 pe-md-0">
+            <div class="row mt-3 d-flex justify-content-between">
+              <div class="col-12 col-md-4 mb-3 pe-md-0 ">
                 <button
                   pButton
-                 
+               
                   type="button"
                   label="Ver Historial"
                   class="historial-button p-2 w-100"
                   (click)="abrirModalHistorialEquipo()"
                 ></button>
+               
+              </div>
+              <div class="col-12 col-md-4 mb-3 ps-md-0 ">
+                <button
+                pButton
+             
+                type="button"
+                label="Ver equipo"
+                class="equipo-button p-2 w-100 rounded-5"
+                (click)="abrirModalHistorialEquipo()"
+              ></button>
               </div>
             </div>
           </div>
